@@ -12,37 +12,43 @@ function PageHeader() {
         console.log("funcionando")
     }
 
+
+
     return (
         <>
             <header>
                 <a href="index.html">
                     <img src={logo} className="Logo1" alt="logo da equipe" />
                 </a>
-                <nav>
-                    <ul className="headerTxt">
-                        <div className="container">
-                        <li>
-                            <a href="index.html" id="inicio1">INICIO</a>
-                        </li>
-                        <li>
-                            <a href="sobre.html">SOBRE</a>
-                        </li>
-                        <li>
-                            <a href="açoes.html">AÇÕES</a>
-                        </li>
-                        <li>
-                            <a href="parceiros.html">PARCEIROS</a>
-                        </li>
-                        <li>
-                            <a href="competições.html">COMPETIÇÕES</a>
-                        </li>
-                        </div>
 
-                        <button className="menu" onClick={toggleMenu}>☰</button>
-                    </ul>
+                <div className="respContainer">
+
+                    <button className="menu" onClick={toggleMenu}>☰</button>
+
+                    <nav>
+                        <ul className={`headerTxt ${showMenu ? 'show' : ''}`}>
+                            <div className="container">
+                                <li>
+                                    <a href="#" id="inicio1">INICIO</a>
+                                </li>
+                                <li>
+                                    <a href="sobre.html">SOBRE</a>
+                                </li>
+                                <li>
+                                    <a href="açoes.html">AÇÕES</a>
+                                </li>
+                                <li>
+                                    <a href="parceiros.html">PARCEIROS</a>
+                                </li>
+                                <li>
+                                    <a href="competições.html">COMPETIÇÕES</a>
+                                </li>
+                            </div>
+                        </ul>
 
 
-                </nav>
+                    </nav>
+                </div>
             </header>
         </>
     )

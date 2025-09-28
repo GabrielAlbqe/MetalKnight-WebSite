@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <PageHeader></PageHeader>
-      <section className="sctInicial">
+      <section className="sctInicial" id='INICIO'>
         <div className="container">
           {/* Texto na esquerda */}
           <div className="textInfo">

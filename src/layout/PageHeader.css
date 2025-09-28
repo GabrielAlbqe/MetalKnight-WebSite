@@ -2,32 +2,40 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     backdrop-filter: blur(5px);
-    /* deixa mais elegante e suave */
-
-    /* fundo branco com 70% de transparência */
-    background-color: rgba(231, 231, 231, 0.395)
+    background-color: rgba(231, 231, 231, 0.395);
 }
 
 .Logo1 {
-    padding-left: 29;
-    padding-right: 1663;
     width: 120px;
     height: 120px;
+    padding-left: 29px;
+    /* O padding pode atrapalhar o responsivo, mas se for necessário, use-o com cuidado */
 }
 
-ul.headerTxt .container{
+/* Estilos de texto e links para desktop */
+ul.headerTxt {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     color: #7912ab;
     font-size: 15px;
-    padding: 20px;
-    display: flex;
     letter-spacing: 1px;
-    transition: transform 3s ease;
+}
+
+.container {
+    display: flex;
+}
+
+ul.headerTxt a {
+    text-decoration: none;
+    color: inherit;
+    /* Herda a cor do ul.headerTxt */
+    padding: 10px;
 }
 
 #inicio1 {
-
     font-weight: 600;
 }
 
@@ -37,13 +45,7 @@ ul.headerTxt .container{
     font-weight: 600;
 }
 
-li,
-a {
-    text-decoration: none;
-    padding: 10px;
-    list-style-type: none;
-}
-
+/* Estilos para o botão do menu sanduíche */
 .menu {
     color: white;
     border-radius: 4px;
@@ -52,20 +54,71 @@ a {
     height: 40px;
     background: linear-gradient(91deg, #7912ab -9.04%, #550080, #7912ab 104.41%);
     border-style: none;
+    cursor: pointer;
     display: none;
+    /* Esconde o botão no desktop */
 }
 
+/* --- Estilos para o Mobile (Telas Pequenas) --- */
 @media (max-width: 768px) {
-    .menu {
-        display: inline;
-    }
-
-    li {
-        display: none;
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
     }
 
     .Logo1 {
         width: 100px;
         height: 100px;
+    }
+
+    /* Exibe o botão do menu sanduíche */
+    .menu {
+        display: block;
+        position: absolute;
+        top: 55px;
+        right: 20px;
+    }
+
+    /* Esconde o menu de navegação por padrão */
+    ul.headerTxt {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 70px;
+        /* Ajuste para o seu layout */
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .container li a {
+        font-weight: 600;
+        font-size: 18px;
+        color: white;
+    }
+
+    ul.headerTxt li {
+        margin: 10px 0;
+    }
+
+    /* Esta classe é ativada pelo React para mostrar o menu */
+    ul.headerTxt.show {
+        margin-top: 77px;
+        margin-right: 40px;
+        border-radius: 20px;
+        display: flex;
+    }
+
+    .headerTxt a:hover {
+        color: rgb(234, 0, 255);
+        font-size: 18px;
+        font-weight: 600;
     }
 }
