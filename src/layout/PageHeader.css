@@ -1,0 +1,41 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Logo1 {
+    padding-left: 29;
+    padding-right: 1663;
+    width: 120px;
+    height: 120px;
+}
+
+ul.headerTxt {
+    color: #7912ab;
+    font-size: 15px;
+    padding: 20px;
+    display: flex;
+    letter-spacing: 1px;
+    transition: transform 3s ease;
+}
+
+#inicio1 {
+
+    font-weight: 600;
+}
+
+.headerTxt a:hover {
+    color: rgb(234, 0, 255);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+li,
+a {
+    text-decoration: none;
+    padding: 10px;
+    list-style-type: none;
+}
+
