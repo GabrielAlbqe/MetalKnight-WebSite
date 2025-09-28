@@ -1,5 +1,115 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(10deg,
+            #f3f0fa 0%,
+            /* roxo muito claro */
+            rgba(137, 43, 226, 0.688) 40%,
+            #f3f0fa 100%);
+}
+
+.sctInicial {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+
+.sctInicial .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.textInfo {
+    width: 34rem;
+    margin-left: 100px;
+}
+
+.textInfo h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+
+}
+
+.txtInicialPage {
+    color: #5A189A;
+}
+
+.txt1Colorido {
+    color: rgb(255, 255, 255);
+
+}
+
+.textInfo p {
+    text-align: justify;
+    width: 32rem;
+    font-weight: 400;
+    color: #3E006F;
+}
+
+.Team-Photo {
+    max-width: 45%;
+    width: 100%;
+    margin-right: 80px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.133);
+}
+
+/* Ajuste geral para telas pequenas */
+@media (max-width: 1024px) {
+    .sctInicial{
+        margin-top: 0rem;
+    }
+
+    .sctInicial .container {
+        align-items: center;
+        flex-direction: column-reverse;
+        /* imagem acima do texto */
+    }
+
+    .textInfo {
+        width: 90%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .textInfo p {
+        width: 100%;
+    }
+
+    .Team-Photo {
+        margin-right: 0;
+        /* remove margem direita */
+        margin-top: 2rem;
+        /* espaço entre texto e imagem */
+        max-width: 60%;
+        /* reduz largura da imagem */
+    }
+}
+
+/* Ajustes para telas muito pequenas (celular) */
+@media (max-width: 480px) {
+    .textInfo h1 {
+        font-size: 2rem;
+        /* diminui o tamanho do título */
+    }
+
+    .textInfo p {
+        font-size: 0.95rem;
+        /* texto menor */
+    }
+
+    .Team-Photo {
+        max-width: 90%;
+        /* ocupa toda largura */
+        margin-bottom: 20px;
+        border-radius: 8px;
+        /* borda menor para mobile */
+    }
 }

@@ -1,6 +1,4 @@
-
-
-.textInfo form {
+form {
     padding-top: 30px;
 }
 
@@ -13,25 +11,22 @@
 
 .infoBtn1 {
     border-radius: 4px;
+    padding: 20px;
     text-align: center;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border-style: none;
-}
-
-.textInfo button {
     font-size: 15px;
     color: #fff;
     width: 280px;
     height: 50px;
     background: linear-gradient(91deg, #7912ab -9.04%, #3C0059, #7912ab 104.41%);
     letter-spacing: 1px;
-
     transition: transform 0.2s ease;
 }
 
-.textInfo button:hover {
+.infoBtn1:hover {
     transform: scale(1.1);
     font-weight: bold;
 }
